@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rajalakshmi Engineering College</title>
+    <link rel="stylesheet" type="text/css" href="styles 2b.css">
+</head>
+<body>
+    <header>
+        <h1>RAJALAKSHMI ENGINEERING COLLEGE</h1>
+        <p>Rajalakshmi Nagar, Thandalam, Chennai - 602 105</p>
+    </header>
+    <div class="container">
+        <aside>
+            <h2><button class="nav-button" onclick="loadContent('CSE')">CSE</button></h2>
+            <nav>
+                <ul>
+                    <li><button class="nav-button" onclick="loadContent('introduction')">Introduction</button></li>
+                    <li><button class="nav-button" onclick="loadContent('opportunities')">Opportunities</button></li>
+                    <li><button class="nav-button" onclick="loadContent('faculty')">Faculty Members</button></li>
+                    <li><button class="nav-button" onclick="loadContent('lab')">Lab Facilities</button></li>
+                    <li><button class="nav-button" onclick="loadContent('news')">News</button></li>
+                </ul>
+            </nav>
+        </aside>
+        <main id="main-content">
+            <h2>Welcome to the Department of CSE - Home Page</h2>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rajalakshmi Engineering College. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function loadContent(section) {
+            const mainContent = document.getElementById('main-content');
+
+            switch(section) {
+                case 'introduction':
+                    mainContent.innerHTML = `
+                        <h2>Introduction</h2>
+                        <section>
+                            <h3>Vision</h3>
+                            <p>To be an institution of excellence in Engineering, Technology and Management Education & Research. To provide competent and ethical professionals with a concern for society.</p>
+                            <h3>Mission</h3>
+                            <p>To impart quality technical education imbibed with proficiency and humane values.
+                            To provide right ambience and opportunities for the students to develop into creative, talented and globally competent professionals.
+                            To promote research and development in technology and management for the benefit of the society.</p>
+                        </section>
+                    `;
+                    break;
+                case 'opportunities':
+                    mainContent.innerHTML = '<h2>Opportunities</h2><section><p>Computer science and Engineering graduates are the pillars of the current and emerging information era. Opportunities include pursuing Master of Science Programs in reputed Universities of U.S. and taking up research assignments in Hardware, System Software, Computer Engineering, Multimedia, Networking and Communication areas.<br><br>Job opportunities are ever increasing and are varied in nature. System study, analysis, Design and Programming are the inherent phases in Application Development and each one of them provides enormous potential to the Computer Science and engineering graduates to shape themselves in their career. Hi-end profiles include Artificial Intelligence, Robotics, Graphic Solutions and Simulations.<br><br>This degree program prepares students for Advanced, Technical Computer Systems Design and Development Work. It includes the study of the Database Design, Data Communications, Procedural and Object Oriented Programming, Operating Systems Design, Algorithm Development and Applications of Artificial Intelligence. The curriculum includes basic course work in Electronics Technology and the Theory of Programming Languages. Students focus on developing computer-based solutions involving hardware and software components and integration. Graduates are qualified to work in a range of positions, from entry-level computer scientists and system engineers to project managers leading advanced applications of computer science to real-world problems. The department has since broadened its research strengths.</p></section>';
+                    break;
+                    case 'faculty':
+                    mainContent.innerHTML = `
+                        <h2>Faculty Members</h2>
+                        <section>
+                            <table>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Name</th>
+                                    <th>Designation</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dr. V. Murali Bhaskaran</td>
+                                    <td>Professor and Dean</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Dr. P. Kumar</td>
+                                    <td>Head and Director</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Dr. Revathy P</td>
+                                    <td>Professor</td>
+                                </tr>
+                            </table>
+                        </section>`;
+                    break;
+                    case 'lab':
+                    mainContent.innerHTML = `
+                        <h2>Lab Facilities</h2>
+                        <section>
+                            <h1>Labs</h1>
+                            <ul>
+                                <li>Chemistry Lab</li>
+                                <li>Physics Lab</li>
+                                <li>Python Lab</li>
+                                <li>Computer Network Lab</li>
+                            </ul>
+                        </section>
+                    `;
+                    break;
+
+                case 'news':
+                    mainContent.innerHTML = '<h2>News</h2><section><h2>Research Centre</h2><p>The department is recognized as a Research Centre for M.S/Ph.D by Anna University.</p></section>';
+                    break;
+                
+                default:
+                    mainContent.innerHTML = '<h2>Welcome to the Department of CSE - Home Page</h2>';
+            }
+        }
+    </script>
+</body>
+</html>

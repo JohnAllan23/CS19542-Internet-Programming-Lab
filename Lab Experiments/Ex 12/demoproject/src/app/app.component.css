@@ -1,0 +1,28 @@
+/* Navbar styling */
+.navbar {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+  }
+  
+  .navbar li {
+    margin: 0;
+    padding: 1em;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+  }
+  
+  .navbar a:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 2em;
+  }
+  

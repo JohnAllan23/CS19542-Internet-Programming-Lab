@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management - Book Form</title>
+    <script>
+    function validateForm() {
+        // Get form values
+        accNo = document.getElementById("accno").value;
+        bookName = document.getElementById("book_name").value;
+        author = document.getElementById("author").value;
+        publisher = document.getElementById("publisher").value;
+        edition = document.getElementById("edition").value;
+        price = document.getElementById("price").value;
+
+        let isValid = true;
+        let errorMessage = "";
+
+        // Validate AccNo (Accession Number)
+        if (accNo === "" || isNaN(accNo)) {
+            errorMessage += "Accession Number must be a valid number.\n";
+            isValid = false;
+        }
+
+        // Validate Book Name
+        if (bookName === "") {
+            errorMessage += "Book name is required.\n";
+            isValid = false;
+        }
+
+        // Validate Author Name
+        if (author === "") {
+            errorMessage += "Author name is required.\n";
+            isValid = false;
+        }
+
+        // Validate Publisher Name
+        if (publisher === "") {
+            errorMessage += "Publisher name is required.\n";
+            isValid = false;
+        }
+
+        // Validate Edition
+        const editionPattern = /^[A-Za-z0-9]+$/;
+        if (edition === "" || !editionPattern.test(edition)) {
+            errorMessage += "Valid edition is required.\n";
+            isValid = false;
+        }
+
+        // Validate Price
+        if (price === "" || isNaN(price) || price <= 0) {
+            errorMessage += "Price must be a valid positive number.\n";
+            isValid = false;
+        }
+
+        // If validation fails, show alert
+        if (!isValid) {
+            alert(errorMessage);
+        }
+
+        return isValid; // This line ensures the form only submits if valid
+    }
+</script>
+        
+</head>
+<body>
+    <h1>Library Management - Book Information</h1>
+    <form name="bookForm" method="POST"  onsubmit="validateForm()" action="BookServlet">
+    
+        <label for="accno">Accession Number (AccNo):</label>
+        <input type="text" id="accno" name="accno" required><br><br>
+
+        <label for="book_name">Book Name:</label>
+        <input type="text" id="book_name" name="book_name" required><br><br>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required><br><br>
+
+        <label for="publisher">Publisher:</label>
+        <input type="text" id="publisher" name="publisher" required><br><br>
+
+        <label for="edition">Edition:</label>
+        <input type="text" id="edition" name="edition" required><br><br>
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management - Book Form</title>
+    <script>
+    function validateForm() {
+        // Get form values
+        accNo = document.getElementById("accno").value;
+        bookName = document.getElementById("book_name").value;
+        author = document.getElementById("author").value;
+        publisher = document.getElementById("publisher").value;
+        edition = document.getElementById("edition").value;
+        price = document.getElementById("price").value;
+
+        let isValid = true;
+        let errorMessage = "";
+
+        // Validate AccNo (Accession Number)
+        if (accNo === "" || isNaN(accNo)) {
+            errorMessage += "Accession Number must be a valid number.\n";
+            isValid = false;
+        }
+
+        // Validate Book Name
+        if (bookName === "") {
+            errorMessage += "Book name is required.\n";
+            isValid = false;
+        }
+
+        // Validate Author Name
+        if (author === "") {
+            errorMessage += "Author name is required.\n";
+            isValid = false;
+        }
+
+        // Validate Publisher Name
+        if (publisher === "") {
+            errorMessage += "Publisher name is required.\n";
+            isValid = false;
+        }
+
+        // Validate Edition
+        const editionPattern = /^[A-Za-z0-9]+$/;
+        if (edition === "" || !editionPattern.test(edition)) {
+            errorMessage += "Valid edition is required.\n";
+            isValid = false;
+        }
+
+        // Validate Price
+        if (price === "" || isNaN(price) || price <= 0) {
+            errorMessage += "Price must be a valid positive number.\n";
+            isValid = false;
+        }
+
+        // If validation fails, show alert
+        if (!isValid) {
+            alert(errorMessage);
+        }
+
+        return isValid; // This line ensures the form only submits if valid
+    }
+</script>
+        
+</head>
+<body>
+    <h1>Library Management - Book Information</h1>
+    <form name="bookForm" method="POST"  onsubmit="validateForm()" action="BookServlet">
+    
+        <label for="accno">Accession Number (AccNo):</label>
+        <input type="text" id="accno" name="accno" required><br><br>
+
+        <label for="book_name">Book Name:</label>
+        <input type="text" id="book_name" name="book_name" required><br><br>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required><br><br>
+
+        <label for="publisher">Publisher:</label>
+        <input type="text" id="publisher" name="publisher" required><br><br>
+
+        <label for="edition">Edition:</label>
+        <input type="text" id="edition" name="edition" required><br><br>
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
